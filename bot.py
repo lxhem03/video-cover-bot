@@ -4,9 +4,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 # --- Environment variables ---
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
-API_ID = int(os.environ.get("API_ID"))
-API_HASH = os.environ.get("API_HASH")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7931367906:AAEM8Rjfg9V8OW3jVAlNGWRHXpdcyNagdm4")
+API_ID = int(os.environ.get("API_ID", "23340285"))
+API_HASH = os.environ.get("API_HASH", "ab18f905cb5f4a75d41bb48d20acfa50")
 
 # --- Client setup ---
 APP = Client("cover_bot", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
@@ -47,8 +47,7 @@ async def start(_, m: Message):
         "☞ Then send a **video**, I’ll apply your cover automatically.\n\n"
         "**Commands:**\n"
         "/show_cover - Show saved cover\n"
-        "/del_cover - Delete saved cover\n\n"
-        "Made by ⋏ 𝛅 𝛕 ⋏ (Asta)"
+        "/del_cover - Delete saved cover"
     )
 
 
@@ -89,7 +88,7 @@ async def video_handler(_, m: Message):
             m.chat.id,
             video=video.file_id,
             thumb=cover,
-            caption="✅ Cover applied successfully!\nMade by ⋏ 𝛅 𝛕 ⋏",
+            caption="✅ Cover applied successfully!",
             supports_streaming=True
         )
         await m.reply_text("Done ✅")
