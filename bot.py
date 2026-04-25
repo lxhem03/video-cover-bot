@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 # --- Environment variables ---
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7931367906:AAEM8Rjfg9V8OW3jVAlNGWRHXpdcyNagdm4")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8674384763:AAF1Tdkti5X7WRMWJAdDL7f9kvL1l0M8VkY")
 API_ID = int(os.environ.get("API_ID", "23340285"))
 API_HASH = os.environ.get("API_HASH", "ab18f905cb5f4a75d41bb48d20acfa50")
 
